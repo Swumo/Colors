@@ -39,7 +39,6 @@ public class Utils {
 	
 	public static List<ChatColor> createGradient(Color start, Color end, int step) {
 	   List<ChatColor> colors = new ArrayList<>(step);
-	   System.out.println(step);
 	   if(step == 1) {
 		   colors.add(ChatColor.of(start));
 		   return colors;
