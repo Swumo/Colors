@@ -15,6 +15,6 @@ Gradient chat color!
 
 This plugin supports Spigot [1.17.x](https://www.spigotmc.org/wiki/buildtools/#1-17-1)
 
-### Todo
+### To-do
 
 Open for suggestions!
