@@ -193,7 +193,7 @@ public class Commands implements TabExecutor{
 			if(args.length > 1) {
 				if(p.isOp()) {
 					Player getPlayer = Bukkit.getPlayer(args[1]);
-					String colorCode = "&f";
+					String colorCode = String.valueOf(pluginConfig.get("defaultColor"));
 					Colors.savePlayerColor(getPlayer, colorCode);
 					getPlayer.sendMessage(Utils.chat(pluginPrefix + " &a" + p.getName() + " &ehas reset your chat color!"));
 					return true;	

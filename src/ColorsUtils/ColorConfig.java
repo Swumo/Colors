@@ -26,7 +26,7 @@ public class ColorConfig {
 				+ "\n"
 				+ "defaultColor - The color used for /color reset command"
 				+ "\n"
-				+ "Default color: &f"
+				+ "Default color: &r"
 				+ "\n"
 				+ "\n"
 				+ "rainbowColor - Color code sequence the Rainbow chat color uses"
@@ -37,7 +37,7 @@ public class ColorConfig {
 		
 		config.addDefault("rainbowColor", "c6eab9d");
 		config.addDefault("pluginPrefix", "&cC&6h&ea&at&bC&9o&dl&5o&cr &6>>");
-		config.addDefault("defaultColor", "&f");
+		config.addDefault("defaultColor", "&r");
 		config.options().copyDefaults(true);
 		plugin.saveConfig();
 		plugin.reloadConfig();
