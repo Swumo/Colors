@@ -5,17 +5,21 @@ Lightweight ChatColor plugin for Minecraft 1.17
 
 ### Features
 
-Includes support for RGB color codes, HEX color codes and Minecraft supported color codes!
-
-Ability to configure some plugin features, ex.: specify the color code sequence used for the Rainbow chat color.
-
-Gradient chat color!
+- Support for: 
+	- RGB color codes 
+	- HEX color codes 
+	- Minecraft color codes
+- Configurable:
+	- Plugin prefix
+	- Default color code
+	- Specific color code sequence used for the Rainbow chat color
+- Ability to use gradient chat color
 
 ### Versions
 
-This plugin supports Spigot [1.17.x](https://www.spigotmc.org/wiki/buildtools/#1-17-1)
+This plugin supports Spigot [1.17.x](https://www.spigotmc.org/wiki/buildtools/#1-17-1)-[1.18.x](https://www.spigotmc.org/wiki/buildtools/#1-18-2)
 
 ### Download
 
-You may download the plugin [here](https://www.mediafire.com/file/pzdi990hq8938n1/Colors.jar/file)
+You may download the plugin [here](https://www.mediafire.com/file/2fnnpx9hfl79vl9/Colors.jar/file)
 

@@ -37,6 +37,7 @@ public class ConfigWrapper {
 		return config;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void loadConfig(final String header) {
 		config.options().header(header);
 		config.options().copyDefaults(true);

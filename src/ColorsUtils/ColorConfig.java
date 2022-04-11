@@ -11,6 +11,7 @@ public class ColorConfig {
 		plugin = p;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void loadConfig() {
 		
 		FileConfiguration config = plugin.getConfig();
