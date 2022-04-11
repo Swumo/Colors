@@ -21,5 +21,5 @@ This plugin supports Spigot [1.17.x](https://www.spigotmc.org/wiki/buildtools/#1
 
 ### Download
 
-You may download the plugin [here](https://www.mediafire.com/file/2fnnpx9hfl79vl9/Colors.jar/file)
+You may download the plugin [here](https://www.mediafire.com/file/j7zvt4ngdw18izt/Colors.jar/file)
 
