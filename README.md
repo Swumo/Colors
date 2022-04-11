@@ -1,6 +1,6 @@
 # Colors
  
-Lightweight ChatColor plugin for Minecraft 1.17
+Lightweight ChatColor plugin for Minecraft 1.17.x-1.18.x
 !
 
 ### Features
