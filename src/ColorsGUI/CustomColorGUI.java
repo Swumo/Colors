@@ -172,15 +172,25 @@ public class CustomColorGUI {
 			}
 			if(!colorCode.contains("&") && !colorCode.contains("rainbow")) {
 				String[] valuesAr = colorCode.split(" ");
-				int rValue = Integer.valueOf(valuesAr[0]);
-				int gValue = Integer.valueOf(valuesAr[1]);
-				int bValue = Integer.valueOf(valuesAr[2]);
-				List<Integer> vals = new ArrayList<Integer>(Arrays.asList(rValue, gValue, bValue));
-				CustomColorGUI.playerRGBValues.put(player.getName(), vals);
-				Inventory inv = GUI(player);
-				playerInvs.put(player.getName(), inv);
-				player.openInventory(inv);
-				return;
+				try {
+					int rValue = Integer.valueOf(valuesAr[0]);
+					int gValue = Integer.valueOf(valuesAr[1]);
+					int bValue = Integer.valueOf(valuesAr[2]);
+					List<Integer> vals = Arrays.asList(rValue, gValue, bValue);
+					CustomColorGUI.playerRGBValues.put(player.getName(), vals);
+					Inventory inv = GUI(player);
+					playerInvs.put(player.getName(), inv);
+					player.openInventory(inv);
+					return;	
+				}
+				catch(Exception e) {
+					List<Integer> vals = Arrays.asList(0,0,0);
+					CustomColorGUI.playerRGBValues.put(player.getName(), vals);
+					Inventory inv = GUI(player);
+					playerInvs.put(player.getName(), inv);
+					player.openInventory(inv);
+					return;	
+				}
 			}
 		}
 		Inventory inv = GUI(player);

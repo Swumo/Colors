@@ -19,6 +19,7 @@ import org.bukkit.inventory.Inventory;
 import ColorsGUI.CustomColorGUI;
 import ColorsMain.Colors;
 import ColorsUtils.Utils;
+import ResiListeners.ResListeners;
 import net.md_5.bungee.api.ChatColor;
 
 public class Listeners implements Listener{
@@ -88,8 +89,12 @@ public class Listeners implements Listener{
 		if(colorCode == null) {
 			return;
 		}
+		if(ResListeners.promptedUser.get(player.getName()) == true || ResListeners.userInAreaSelection.get(player.getName()) == true) {
+			return;
+		}
 		if(!colorCode.contains("&")) {
 			if(colorCode.equals("rainbow")) {
+				event.setCancelled(true);
 				// Getting config
 				FileConfiguration config = Colors.getInstance().getConfig();
 				// Colour sequence supplied in the config
@@ -120,8 +125,14 @@ public class Listeners implements Listener{
 				String newMessage =	convertStringArrayToString(fragments);
 				// Replace all the colour codes with actual colours
 				newMessage = Utils.chat(newMessage);
+				// Send non colorized message to console
+				String toConsole = "<" + player.getName() + "> " + message;
+				System.out.println(toConsole);
 				// Send the colorized message through
-				event.setMessage(Utils.chat(newMessage));
+				String finalMessage = "<" + player.getName() + "> " + newMessage;
+				for(Player p : Bukkit.getServer().getOnlinePlayers()) {
+					p.sendMessage(Utils.chat(finalMessage));
+				}
 				return;
 			}
 			if(colorCode.contains(";")) {
@@ -154,8 +165,16 @@ public class Listeners implements Listener{
 			event.setMessage(newMessage);
 			return;
 		}
+		event.setCancelled(true);
+		// Send non colorized message to console
+		String toConsole = "<" + player.getName() + "> " + message;
+		System.out.println(toConsole);
+		// Send colored message
 		message = Utils.chat(colorCode+message);
-		event.setMessage(message);
+		String finalMessage = "<" + player.getName() + "> " + message;
+		for(Player p : Bukkit.getServer().getOnlinePlayers()) {
+			p.sendMessage(Utils.chat(finalMessage));
+		}
 		return;
 	}
 	
